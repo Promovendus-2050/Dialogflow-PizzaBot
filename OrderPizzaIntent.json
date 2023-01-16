@@ -1,0 +1,167 @@
+{
+  "id": "d1c9d9f9-2868-4f3c-8070-b37d8d7a35bb",
+  "name": "OrderPizzaIntent",
+  "auto": true,
+  "condition": "",
+  "conditionalFollowupEvents": [],
+  "conditionalResponses": [],
+  "context": [],
+  "contexts": [],
+  "endInteraction": true,
+  "events": [],
+  "fallbackIntent": false,
+  "liveAgentHandoff": false,
+  "parentId": null,
+  "followUpIntents": [],
+  "priority": 500000,
+  "responses": [
+    {
+      "action": "",
+      "affectedContexts": [
+        {
+          "name": "OrderPizzaIntent-followup",
+          "lifespan": 2
+        }
+      ],
+      "parameters": [
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "size",
+          "dataType": "@PizzaSize",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "What pizza size do you prefer? We offer Small, Medium, Large and Extra Large."
+          ],
+          "value": "$size",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "ingredients",
+          "dataType": "@PizzaIngredients",
+          "isList": true,
+          "required": true,
+          "prompts": [
+            "Which ingredients would you like as toppings on your pizza? Today's available ingredients are - Chicken, Mushroom, Pineapple, Jalapeño, Pepperoni and Margarita."
+          ],
+          "value": "$ingredients",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "crust",
+          "dataType": "@PizzaCrustType",
+          "isList": false,
+          "required": true,
+          "prompts": [
+            "We have 3 crust types - Regular, Thin and Cheese Burst. Please mention your preferred pizza crust type."
+          ],
+          "value": "$crust",
+          "outputDialogContexts": []
+        },
+        {
+          "noInputPromptMessages": [],
+          "noMatchPromptMessages": [],
+          "promptMessages": [],
+          "defaultValue": "",
+          "name": "specials",
+          "dataType": "@PizzaSpecials",
+          "isList": true,
+          "required": true,
+          "prompts": [
+            "Please mention the specials or side dishes you would like to order. Specials currently available are -  Garlic Bread with Dip, Pepsi, Chicken Fiery Wings and Choco Burst Cupcake or None."
+          ],
+          "value": "$specials",
+          "outputDialogContexts": []
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "messages": [
+        {
+          "type": "message",
+          "condition": "",
+          "speech": [
+            "Hello. Your order has been Received. It will be prepared shortly and delivered to you. Kindly complete the payment now."
+          ]
+        }
+      ],
+      "resetContexts": false
+    }
+  ],
+  "rootParentId": null,
+  "templates": [],
+  "userSays": [
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "order a pizza",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a824b02d-e024-4252-a64c-41ec73ea1bd1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "i want pizza",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "ea9b3309-dac8-4985-a446-f6dfe0f9e2a1",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "pizza order",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "a5924862-ce12-4f34-8b6b-6d068c845f6a",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "I want to order a pizza",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "cc2dfad2-7db9-4c07-a585-201ced6304dc",
+      "updated": null
+    },
+    {
+      "isTemplate": false,
+      "data": [
+        {
+          "text": "Can I make a pizza order",
+          "userDefined": false
+        }
+      ],
+      "count": 0,
+      "id": "d34d42a6-8201-471b-bf34-cac1910f6b5f",
+      "updated": null
+    }
+  ],
+  "webhookForSlotFilling": false,
+  "webhookUsed": false
+}
